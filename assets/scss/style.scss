@@ -1,0 +1,93 @@
+$primary: #00cae9;
+
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+.separador {
+  border-radius: 2px;
+  height: 1px;
+  width: 100%;
+  margin: 15px 15px;
+  background: #aaaaaa77;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner,
+::-webkit-scrollbar {
+  background: #f5f5f5;
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $primary;
+}
+
+/*::selection {
+  background: var(--color);
+}*/
+
+
+.w-100 {
+  width: 100%;
+}
+
+
+// Transiciones de vue
+.list-enter-active,
+.list-leave-active {
+  transition: all .3s;
+}
+
+.list-enter,
+.list-leave-to
+
+/* .list-leave-active below version 2.1.8 */
+  {
+  opacity: 0;
+}
+
+// Transiciones de vue
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .2s;
+}
+
+.fade-enter,
+.fade-leave-to
+
+/* .fade-leave-active below version 2.1.8 */
+  {
+  opacity: 0;
+}
+
+.v-picker__title__btn.v-date-picker-title__year,
+.v-picker__title__btn.v-date-picker-title__date {
+  color: black !important;
+}
+
+// Estilo para tablas
+table td {
+  padding-bottom: .5em;
+}
+
+table.table th {
+  padding-bottom: .5em;
+}
+
+
+
+// Estilo para infoWindow  de google maps
+.gm-style-iw.gm-style-iw-c {
+  padding: 0 !important;
+}
+
+.gm-style .gm-style-iw-d {
+  overflow: auto !important;
+}

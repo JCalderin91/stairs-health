@@ -1,0 +1,22 @@
+<svg id="heartbeat" xmlns="http://www.w3.org/2000/svg" width="66.706" height="49.562" viewBox="0 0 66.706 49.562">
+  <g id="Grupo_6" data-name="Grupo 6" transform="translate(5.673 0)">
+    <g id="Grupo_5" data-name="Grupo 5">
+      <path id="Trazado_3" data-name="Trazado 3" d="M92.647,66.792a15.7,15.7,0,0,0-22.2,0L69.2,68.039l-1.246-1.246a15.7,15.7,0,1,0-22.2,22.2L68.03,111.272a1.655,1.655,0,0,0,2.34,0L92.647,88.994a15.7,15.7,0,0,0,0-22.2ZM90.308,86.655,69.2,107.764,48.09,86.655A12.391,12.391,0,0,1,65.614,69.131l2.416,2.416a1.653,1.653,0,0,0,2.339,0l2.416-2.416A12.391,12.391,0,0,1,90.308,86.655Z" transform="translate(-41.16 -62.194)"/>
+    </g>
+  </g>
+  <g id="Grupo_8" data-name="Grupo 8" transform="translate(0 20.895)">
+    <g id="Grupo_7" data-name="Grupo 7" transform="translate(0 0)">
+      <path id="Trazado_4" data-name="Trazado 4" d="M7.718,213.806H1.654a1.654,1.654,0,1,0,0,3.308H7.718a1.654,1.654,0,1,0,0-3.308Z" transform="translate(0 -213.806)"/>
+    </g>
+  </g>
+  <g id="Grupo_10" data-name="Grupo 10" transform="translate(7.166 12.128)">
+    <g id="Grupo_9" data-name="Grupo 9" transform="translate(0 0)">
+      <path id="Trazado_5" data-name="Trazado 5" d="M104.368,159.013H88.539L86.076,153.6a1.1,1.1,0,0,0-2.043.087L79,167.869l-6.12-16.949a1.1,1.1,0,0,0-.985-.727,1.072,1.072,0,0,0-1.049.632l-4.113,8.739H53.1a1.1,1.1,0,0,0-1.1,1.1c0,.609.725,1.049,1.335,1.049H67.664c.427,0,.584-.193.766-.579l3.278-6.967,6.264,17.346a1.1,1.1,0,0,0,1.037.728h0a1.1,1.1,0,0,0,1.036-.734L85.2,156.993l1.627,3.578a1.433,1.433,0,0,0,1.236.593H104.6c.609,0,.87-.44.87-1.049A1.1,1.1,0,0,0,104.368,159.013Z" transform="translate(-51.996 -150.192)"/>
+    </g>
+  </g>
+  <g id="Grupo_12" data-name="Grupo 12" transform="translate(58.436 20.344)">
+    <g id="Grupo_11" data-name="Grupo 11">
+      <path id="Trazado_6" data-name="Trazado 6" d="M430.615,209.806h-4.962a1.654,1.654,0,1,0,0,3.308h4.962a1.654,1.654,0,0,0,0-3.308Z" transform="translate(-424 -209.806)"/>
+    </g>
+  </g>
+</svg>
