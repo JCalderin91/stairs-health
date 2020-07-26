@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <hero /> -->
+    <hero />
     <!-- <categories /> -->
     <clinics />
     <features />
@@ -8,14 +8,14 @@
   </div>
 </template>
 <script>
-// import Hero from "~/components/views/home/Hero";
+import Hero from "~/components/views/home/Hero";
 // import Categories from '~/components/views/home/Categories'
 import Clinics from "~/components/views/home/Clinics";
 import Features from "~/components/views/home/Features";
 import Parallax from "~/components/views/home/Parallax";
 export default {
   components: {
-    // Hero,
+    Hero,
     // Categories,
     Clinics,
     Features,

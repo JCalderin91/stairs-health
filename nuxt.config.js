@@ -35,12 +35,21 @@ export default {
       rel: 'icon',
       type: 'image/x-icon',
       href: '/favicon.ico'
+    }, {
+      rel: 'stylesheet',
+      href: 'https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;1,900&display=swap'
+    }, {
+      rel: 'stylesheet',
+      href: 'https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css'
+    }, {
+      rel: 'stylesheet',
+      href: '/fonts/font-awesome.min.css'
     }]
   },
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['@/assets/scss/style.scss'],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -78,9 +87,8 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: false,
       themes: {
-        dark: {
+        light: {
           primary: '#00cae9',
           accent: colors.grey.darken3,
           secondary: colors.amber.darken3,

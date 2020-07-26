@@ -1,32 +1,29 @@
 <template>
   <v-app>
+    <main-menu @toggleDialog="dialog = $event" />
     <nuxt />
+    <end-page />
+    <v-dialog v-model="dialog" max-width="350">
+      <v-card>
+        <login />
+      </v-card>
+    </v-dialog>
   </v-app>
 </template>
 
 <script>
+import MainMenu from "@/components/Menu";
+import EndPage from "@/components/EndPage";
+import Login from "@/components/views/auth/Login";
 export default {
+  components: {
+    MainMenu,
+    EndPage,
+    Login,
+  },
   data() {
     return {
-      clipped: false,
-      drawer: false,
-      fixed: false,
-      items: [
-        {
-          icon: "mdi-apps",
-          title: "Welcome",
-          to: "/",
-        },
-        {
-          icon: "mdi-chart-bubble",
-          title: "Inspire",
-          to: "/inspire",
-        },
-      ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: "Vuetify.js",
+      dialog: false,
     };
   },
 };
