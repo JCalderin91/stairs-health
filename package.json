@@ -14,7 +14,9 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.11.0",
     "nuxt": "^2.13.0",
-    "vue-concise-slider": "^3.4.4"
+    "nuxt-gmaps": "^1.2.5",
+    "vue-concise-slider": "^3.4.4",
+    "vue-slick-carousel": "^1.0.6"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.0.0",

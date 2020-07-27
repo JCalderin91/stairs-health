@@ -19,20 +19,17 @@
           </v-col>
           <v-col :md="6">
             <div style="width:100%;margin:20px auto;height:500px">
-              <slider ref="slider" :options="options" @slide="slide">
-                <!-- slideritem wrapped package with the components you need -->
-                <slideritem>
+              <VueSlickCarousel ref="carousel" @afterChange="afterChange($event)" v-bind="options">
+                <div class="img-wrapper">
                   <img class="img-phone" src="@/assets/image/banner-gif-1.png" alt />
-                </slideritem>
-                <slideritem>
+                </div>
+                <div class="img-wrapper">
                   <img class="img-phone" src="@/assets/image/banner-gif-2.png" alt />
-                </slideritem>
-                <slideritem>
+                </div>
+                <div class="img-wrapper">
                   <img class="img-phone" src="@/assets/image/banner-gif-3.png" alt />
-                </slideritem>
-                <!-- Customizable loading -->
-                <div slot="loading">Cargando...</div>
-              </slider>
+                </div>
+              </VueSlickCarousel>
             </div>
           </v-col>
           <v-col :sm="12" class="up">
@@ -71,22 +68,15 @@
 </template>
 
 <script>
-import { slider, slideritem } from "vue-concise-slider";
 export default {
-  components: {
-    slider,
-    slideritem,
-  },
   data() {
     return {
       wave: false,
       showBanner: 0,
       options: {
-        currentPage: 0,
-        infinite: 1,
-        slidesToScroll: 1,
-        pagination: false,
-        loop: true,
+        slidesToShow: 1,
+        arrows: false,
+        autoplay: true,
       },
       texts: [
         {
@@ -124,10 +114,10 @@ export default {
   },
   methods: {
     setBanner(indx) {
-      this.$refs.slider.$emit("slideTo", indx);
+      this.$refs.carousel.goTo(indx);
     },
-    slide(slide) {
-      this.showBanner = slide.currentPage;
+    afterChange(slide) {
+      this.showBanner = slide;
     },
   },
 };
@@ -162,6 +152,9 @@ export default {
     .img-phone,
     .img-logo {
       z-index: 1;
+    }
+    .slick-slider {
+      z-index: 2;
     }
 
     .img-phone {

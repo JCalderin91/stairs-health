@@ -1,46 +1,40 @@
 <template>
-    <gmap-map
-      ref="gmap"
-      :center="center"
-      :zoom="12"
-      style="height: 100%;"
-      :options="options"
+  <GMap ref="gmap" :center="markers[0].position" :zoom="12" class="gmap" :options="options">
+    <GMapMarker
+      :key="index"
+      v-for="(m, index) in markers"
+      :position="m.position"
+      :options="markerOptions"
+      @click="toggleInfoWindow(m,index)"
     >
-      
-      <gmap-marker
-        :key="index"
-        v-for="(m, index) in markers"
-        :position="m.position"
-        :icon="markerOptions"
-        @click="toggleInfoWindow(m,index)">
-      </gmap-marker>
-
-      <gmap-info-window
+      <GMapInfoWindow
         :options="infoOptions"
         :position="infoWindowPos"
         :opened="infoWinOpen"
         @closeclick="infoWinOpen=false"
       >
         <card inMap />
-      </gmap-info-window>
-
-    </gmap-map>
+      </GMapInfoWindow>
+    </GMapMarker>
+  </GMap>
 </template>
 
 <script>
-import Card from '@/components/Card'
-const mapMarker = require('@/assets/image/marker.png');
+import Card from "@/components/Card";
+const mapMarker = require("@/assets/image/marker.png");
 export default {
   components: {
-    Card
+    Card,
   },
   name: "GoogleMap",
   data() {
     return {
       markerOptions: {
-        url: mapMarker,
-        size: {width: 60, height: 60, f: 'px', b: 'px',},
-        scaledSize: {width: 40, height: 40, f: 'px', b: 'px',},
+        icon: {
+          url: mapMarker,
+          size: { width: 60, height: 60, f: "px", b: "px" },
+          scaledSize: { width: 40, height: 40, f: "px", b: "px" },
+        },
       },
       //a default center for the map
       options: {
@@ -49,34 +43,35 @@ export default {
         scaleControl: true,
         streetViewControl: false,
         rotateControl: false,
-        fullscreenControl: false
+        fullscreenControl: false,
       },
       center: {
-        lat: 52.511950,
-        lng: 6.089625
+        lat: 52.51195,
+        lng: 6.089625,
       },
       map: null,
-      infoContent: '',
+      infoContent: "",
       infoWindowPos: {
         lat: 0,
-        lng: 0
+        lng: 0,
       },
       infoWinOpen: false,
       currentMidx: null,
       //optional: offset infowindow so it visually sits nicely on top of our marker
       infoOptions: {
         pixelOffset: {
-          width: -10,
-          height: -45
-        }
+          width: -9,
+          height: 5,
+        },
       },
-      markers: [{
+      markers: [
+        {
           name: "House of Aleida Greve",
           description: "description 1",
           date_build: "",
           position: {
             lat: 40.711631,
-            lng: -74.006641
+            lng: -74.006641,
           },
         },
         {
@@ -84,31 +79,31 @@ export default {
           description: "description 2",
           date_build: "",
           position: {
-            lat: 40.720840, 
-            lng: -74.010571
-          }
+            lat: 40.72084,
+            lng: -74.010571,
+          },
         },
         {
           name: "House of Johannes Cele",
           description: "description 3",
           date_build: "",
           position: {
-            lat: 40.732740,
-            lng: -74.010571
-          }
+            lat: 40.73274,
+            lng: -74.010571,
+          },
         },
       ],
     };
   },
   mounted() {
     //set bounds of the map
-    this.$refs.gmap.$mapPromise.then((map) => {
-      const bounds = new google.maps.LatLngBounds()
-      for (let m of this.markers) {
-        bounds.extend(m.position)
-      }
-      map.fitBounds(bounds);
-    });
+    // this.$refs.gmap.$mapPromise.then((map) => {
+    //   const bounds = new google.maps.LatLngBounds();
+    //   for (let m of this.markers) {
+    //     bounds.extend(m.position);
+    //   }
+    //   map.fitBounds(bounds);
+    // });
   },
   methods: {
     toggleInfoWindow: function (marker, idx) {
@@ -123,7 +118,16 @@ export default {
         this.infoWinOpen = true;
         this.currentMidx = idx;
       }
-    }
-  }
+    },
+  },
 };
 </script>
+
+<style lang="scss" scoped>
+.GMap {
+  height: 100%;
+}
+.GMap__Wrapper {
+  height: 100% !important;
+}
+</style>

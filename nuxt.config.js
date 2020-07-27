@@ -46,15 +46,21 @@ export default {
       href: '/fonts/font-awesome.min.css'
     }]
   },
+  loading: {
+    color: '#ffe600',
+    height: '3px'
+  },
   /*
    ** Global CSS
    */
-  css: ['@/assets/scss/style.scss'],
+  css: ['@/assets/scss/style.scss', 'vue-slick-carousel/dist/vue-slick-carousel.css'],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [],
+  plugins: [{
+    src: './plugins/vue-slick-carousel.js'
+  }],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -72,6 +78,10 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
+    ['nuxt-gmaps', {
+      key: 'AIzaSyArEloE-Gg4tUr7j7qVvyyUWZGa1RU2KZA',
+      //you can use libraries: ['places']
+    }],
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios'
   ],

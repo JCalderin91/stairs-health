@@ -2,9 +2,9 @@
   <v-app-bar id="menu" color="primary" app>
     <div class="container d-flex align-center">
       <v-toolbar-title class="container-logo">
-        <router-link tag="a" :to="{name:'home'}">
-          <img class="logo-app" src="@/assets/logo-white.png" alt="">
-        </router-link>
+        <nuxt-link tag="a" :to="'/'">
+          <img class="logo-app" src="@/assets/logo-white.png" alt />
+        </nuxt-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
 
@@ -15,7 +15,6 @@
         <span>For Providers</span>
         <span>Contact Us</span>
       </div>
-
 
       <v-spacer></v-spacer>
 
@@ -29,21 +28,21 @@
 </template>
 
 <script>
-  export default {
-    data: () => ({
-      //
-    }),
-    computed: {
-      home () {
-        return this.$route.name !== 'home'
-      }
+export default {
+  data: () => ({
+    //
+  }),
+  computed: {
+    home() {
+      return this.$route.name !== "home";
     },
-    methods: {
-      login () {
-        this.$emit('toggleDialog', true)
-      }
-    }
-  }
+  },
+  methods: {
+    login() {
+      this.$emit("toggleDialog", true);
+    },
+  },
+};
 </script>
 
 <style scoped lang="scss">
@@ -67,8 +66,8 @@
         position: relative;
 
         &.layer::before {
-          content: '';
-          background: #04D5F5;
+          content: "";
+          background: #04d5f5;
           position: absolute;
           top: -19px;
           left: 0px;

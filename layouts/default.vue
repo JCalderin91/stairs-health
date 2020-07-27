@@ -1,7 +1,9 @@
 <template>
   <v-app>
     <main-menu @toggleDialog="dialog = $event" />
-    <nuxt />
+    <v-main>
+      <nuxt />
+    </v-main>
     <end-page />
     <v-dialog v-model="dialog" max-width="350">
       <v-card>

@@ -1,12 +1,13 @@
 <template>
   <v-card id="card" :class="{'border': !inMap}">
-    <v-img class="white--text align-end" height="200px" :src="require('~/assets/image/0.png')">
+    <div class="white--text align-end image-container">
+      <img class="image-card" src="@/assets/image/0.png" alt srcset />
       <div class="badge">
         <div class="price">$ 200</div>
         <div class="text">Standar Charges</div>
       </div>
       <div class="main-title">Clinic Domenic</div>
-    </v-img>
+    </div>
     <v-card-text class="text--primary">
       <h4>Treatment Mane</h4>
       <h5>Teeament descrioption</h5>
@@ -29,7 +30,17 @@ export default {
 #card {
   box-shadow: none;
   cursor: pointer;
-
+  .image-container {
+    position: relative;
+    height: 180px;
+    .image-card {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
   &.border {
     border: 1px solid rgb(226, 226, 226);
   }

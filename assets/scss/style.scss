@@ -86,8 +86,20 @@ table.table th {
 // Estilo para infoWindow  de google maps
 .gm-style-iw.gm-style-iw-c {
   padding: 0 !important;
+  max-width: none !important;
+  min-width: 250px !important;
 }
 
 .gm-style .gm-style-iw-d {
   overflow: auto !important;
+  max-height: none !important;
+}
+
+.GMap__Wrapper {
+  height: 100% !important;
+}
+
+
+:focus {
+  outline: none !important;
 }
