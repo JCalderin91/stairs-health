@@ -16,6 +16,7 @@
                 outlined
                 rounded
                 placeholder="Speciality"
+                background-color="white"
                 class="w-100 px-5"
               ></v-text-field>
             </v-col>
@@ -25,6 +26,7 @@
                 outlined
                 rounded
                 placeholder="Treatment"
+                background-color="white"
                 class="w-100 px-5"
               ></v-text-field>
             </v-col>
@@ -35,6 +37,7 @@
                 rounded
                 placeholder="Location"
                 append-icon="mdi-map-marker"
+                background-color="white"
                 class="w-100 px-5"
               ></v-text-field>
             </v-col>
@@ -45,6 +48,7 @@
                 rounded
                 placeholder="Price"
                 append-icon="mdi-currency-usd"
+                background-color="white"
                 class="w-100 px-5"
               ></v-text-field>
             </v-col>

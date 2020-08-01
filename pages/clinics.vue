@@ -1,9 +1,11 @@
 <template>
   <div>
-    <specialities-slider />
+    <v-container class="py-0">
+      <specialities-slider />
+    </v-container>
     <section class="filter-container pt-3">
-      <v-container>
-        <v-row>
+      <v-container class="py-0">
+        <v-row class="mt-5">
           <v-col :md="3">
             <v-menu :close-on-content-click="false" bottom offset-y>
               <template v-slot:activator="{ on: menu, attrs }">
@@ -63,12 +65,12 @@
     </section>
     <v-container>
       <v-row>
-        <v-col :md="mapCol" class="mapContainer">
+        <v-col :md="mapCol" class="mapContainer py-0">
           <div class="mapa static-map">
             <map-specialities id="map" />
           </div>
         </v-col>
-        <v-col v-if="mapCol === 3" :md="9" class="specialities-container----">
+        <v-col v-if="mapCol === 3" :md="9" class="specialities-container---- py-0">
           <v-col cols="12">
             <v-chip close color="primary">Insurance 2 - Plan 4</v-chip>
             <v-chip close color="primary">Treatmen premium</v-chip>

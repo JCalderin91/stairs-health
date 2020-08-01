@@ -1,5 +1,5 @@
 <template>
-  <div class="specialities-body" :class="{'noMargin': $route.name !== 'index'}">
+  <div class="specialities-body" :class="{'noIndex': $route.name !== 'index'}">
     <div @click="slidePrev()" class="slider-controller left-controller">
       <i class="fa fa-chevron-left"></i>
     </div>
@@ -105,11 +105,15 @@ export default {
   border-radius: 5px;
   overflow: hidden;
   border: 1px solid rgb(226, 226, 226);
-  &:not(.noMargin) {
+  &:not(.noIndex) {
     transform: translateY(-15px);
   }
-  &.noMargin {
+  &.noIndex {
+    border: none;
     margin: 0;
+    .slider-controller {
+      background: transparent;
+    }
   }
   .slider {
     display: block;
