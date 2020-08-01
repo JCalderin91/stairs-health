@@ -28,6 +28,7 @@
               chips
               rounded
               small-chips
+              background-color="white"
               label="Treatments"
             ></v-autocomplete>
           </v-col>
@@ -35,6 +36,7 @@
             <v-text-field
               outlined
               rounded
+              background-color="white"
               append-icon="mdi-map-marker"
               placeholder="Zip code or City"
             ></v-text-field>
