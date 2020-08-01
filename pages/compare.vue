@@ -10,57 +10,43 @@
         </v-card>
         <v-row v-else>
           <v-row>
-            <v-col :md="3">
-              <v-menu :close-on-content-click="false" bottom offset-y>
-                <template v-slot:activator="{ on: menu, attrs }">
-                  <v-btn
-                    rounded
-                    x-large
-                    block
-                    color="primary"
-                    v-bind="attrs"
-                    v-on="{ ...menu }"
-                  >Chose your insurance</v-btn>
-                </template>
-                <v-card>
-                  <choose-insurance />
-                </v-card>
-              </v-menu>
-            </v-col>
-            <v-col :md="3">
-              <v-autocomplete
-                :items="treatments"
-                outlined
-                chips
-                rounded
-                small-chips
-                label="Treatments"
-              ></v-autocomplete>
-            </v-col>
-            <v-col :md="3">
+            <v-col md="6">
               <v-text-field
+                hide-details
                 outlined
                 rounded
-                append-icon="mdi-map-marker"
-                placeholder="Zip code or City"
+                placeholder="Speciality"
+                class="w-100 px-5"
               ></v-text-field>
             </v-col>
-            <v-col :md="3">
-              <div class="custom-range-slider">
-                <v-range-slider
-                  class="mt-5"
-                  v-model="range"
-                  min="100"
-                  max="1000"
-                  thumb-label="always"
-                  :thumb-size="20"
-                >
-                  <template v-slot:thumb-label></template>
-                </v-range-slider>
-                <span class="span-label min">Min</span>
-                <span class="span-label label">Price</span>
-                <span class="span-label max">Max</span>
-              </div>
+            <v-col md="6">
+              <v-text-field
+                hide-details
+                outlined
+                rounded
+                placeholder="Treatment"
+                class="w-100 px-5"
+              ></v-text-field>
+            </v-col>
+            <v-col md="6">
+              <v-text-field
+                hide-details
+                outlined
+                rounded
+                placeholder="Location"
+                append-icon="mdi-map-marker"
+                class="w-100 px-5"
+              ></v-text-field>
+            </v-col>
+            <v-col md="6">
+              <v-text-field
+                hide-details
+                outlined
+                rounded
+                placeholder="Price"
+                append-icon="mdi-currency-usd"
+                class="w-100 px-5"
+              ></v-text-field>
             </v-col>
           </v-row>
           <v-row class="px-5">
