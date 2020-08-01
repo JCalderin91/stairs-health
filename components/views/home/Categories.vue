@@ -4,34 +4,57 @@
       <specialities-slider />
       <div class="inputs-container">
         <v-row>
-          <v-col :md="4">
-            <v-text-field
-              outlined
-              rounded
-              append-icon="mdi-magnify"
-              placeholder="Search"
-              class="mx-10"
-            ></v-text-field>
+          <v-col :md="3">
+            <v-menu :close-on-content-click="false" bottom offset-y>
+              <template v-slot:activator="{ on: menu, attrs }">
+                <v-btn
+                  rounded
+                  x-large
+                  block
+                  color="primary"
+                  v-bind="attrs"
+                  v-on="{ ...menu }"
+                >Chose your insurance</v-btn>
+              </template>
+              <v-card>
+                <choose-insurance />
+              </v-card>
+            </v-menu>
           </v-col>
-          <v-col :md="4">
+          <v-col :md="3">
+            <v-autocomplete
+              :items="treatments"
+              outlined
+              chips
+              rounded
+              small-chips
+              label="Treatments"
+            ></v-autocomplete>
+          </v-col>
+          <v-col :md="3">
             <v-text-field
               outlined
               rounded
               append-icon="mdi-map-marker"
               placeholder="Zip code or City"
-              class="mx-10"
             ></v-text-field>
           </v-col>
-          <v-col :md="4">
-            <v-range-slider
-              label="Price range"
-              class="mt-5 mr-10"
-              v-model="range"
-              min="100"
-              max="1000"
-              thumb-label="always"
-              :thumb-size="24"
-            ></v-range-slider>
+          <v-col :md="3">
+            <div class="custom-range-slider">
+              <v-range-slider
+                class="mt-5"
+                v-model="range"
+                min="100"
+                max="1000"
+                thumb-label="always"
+                :thumb-size="20"
+              >
+                <template v-slot:thumb-label></template>
+              </v-range-slider>
+              <span class="span-label min">Min</span>
+              <span class="span-label label">Price</span>
+              <span class="span-label max">Max</span>
+            </div>
           </v-col>
         </v-row>
       </div>
@@ -44,7 +67,7 @@ import SpecialitiesSlider from "@/components/SpecialitiesSlider";
 export default {
   components: { SpecialitiesSlider },
   data: () => ({
-    range: [100, 1000],
+    range: [200, 800],
   }),
 };
 </script>
@@ -60,6 +83,25 @@ export default {
   }
   .inputs-container {
     padding: 0 15px;
+  }
+  .custom-range-slider {
+    position: relative;
+    .span-label {
+      position: absolute;
+      top: 20px;
+      &.min {
+        color: #00cae9;
+      }
+      &.max {
+        right: 0;
+        color: #00cae9;
+      }
+      &.label {
+        left: 50%;
+        transform: translateX(-50%);
+        color: rgb(158, 158, 158);
+      }
+    }
   }
 }
 </style>

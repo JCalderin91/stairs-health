@@ -33,7 +33,7 @@
         </div>
         <br />
         <div class="d-flex justify-center">
-          <sh-button invert text="Call Us" img="phone.svg" />
+          <sh-button invert img="phone.svg">Call Us</sh-button>
         </div>
       </div>
     </transition>
@@ -42,14 +42,12 @@
 
 <script>
 import Information from "@/components/Information";
-import ShButton from "@/components/ShButton";
 import SpecialityList from "@/components/SpecialityList";
 import MapContact from "@/components/MapContact";
 
 export default {
   components: {
     Information,
-    ShButton,
     SpecialityList,
     MapContact,
   },

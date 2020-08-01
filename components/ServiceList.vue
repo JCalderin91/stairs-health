@@ -12,7 +12,7 @@
 		<div>
 			<div class="list-services">
 				<table class="w-100">
-					<transition-group name="list" tag="tbody">
+					<transition-group name="list" tag="tbody" key="table-services">
 						<tr v-for="(service, key) in filterServices" :key="key">
 							<td>{{service}}</td>
 							<td class="text-right">100</td>

@@ -50,7 +50,7 @@ export default {
 #category {
   display: flex;
   flex-direction: column;
-  margin: 20px auto 25px auto;
+  margin: 35px auto;
   text-align: center;
   transition: all 0.3s ease-in-out;
   &.hover {
@@ -71,16 +71,17 @@ export default {
     font-size: 12px;
   }
   .image-container {
-    height: 80px;
-    width: 80px;
-    padding: 20px;
+    height: 70px;
+    width: 70px;
+    padding: 15px;
     border-radius: 50%;
     border: 2px solid #888;
     margin: 0 auto;
+    margin-bottom: 5px;
     transition: all 0.3s ease-in-out;
     &.noHome {
-      height: 100px !important;
-      width: 100px !important;
+      height: 80px !important;
+      width: 80px !important;
     }
     .image {
       width: 100%;

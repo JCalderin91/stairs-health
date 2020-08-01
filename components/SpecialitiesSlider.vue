@@ -1,5 +1,5 @@
 <template>
-  <div class="specialities-body">
+  <div class="specialities-body" :class="{'noMargin': $route.name !== 'index'}">
     <div @click="slidePrev()" class="slider-controller left-controller">
       <i class="fa fa-chevron-left"></i>
     </div>
@@ -27,9 +27,53 @@ export default {
       range: [125, 587],
       //Slider configuration [obj]
       options: {
-        slidesToShow: 7,
+        slidesToShow: 14,
         arrows: false,
         autoplay: false,
+        responsive: [
+          {
+            breakpoint: 1800,
+            settings: {
+              slidesToShow: 12,
+            },
+          },
+          {
+            breakpoint: 1500,
+            settings: {
+              slidesToShow: 9,
+            },
+          },
+          {
+            breakpoint: 1400,
+            settings: {
+              slidesToShow: 8,
+            },
+          },
+          {
+            breakpoint: 1300,
+            settings: {
+              slidesToShow: 7,
+            },
+          },
+          {
+            breakpoint: 800,
+            settings: {
+              slidesToShow: 5,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 3,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+            },
+          },
+        ],
       },
     };
   },
@@ -62,6 +106,9 @@ export default {
   border-radius: 5px;
   overflow: hidden;
   border: 1px solid rgb(226, 226, 226);
+  &.noMargin {
+    margin: 0;
+  }
   .slider {
     display: block;
     padding: 0 50px;

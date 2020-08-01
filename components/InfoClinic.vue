@@ -8,7 +8,10 @@
         <h1 class="title-clinic">Clinic Domenic</h1>
         <information />
         <div class="button d-flex justify-end">
-          <sh-button :to="{name:'your-spot'}" text="Save your Spot" img="calendario-3.svg" />
+          <sh-button :to="{name:'your-spot'}" img="calendario-3.svg">
+            Save
+            <b class="ml-1">your Spot</b>
+          </sh-button>
         </div>
       </v-col>
     </v-row>
@@ -17,11 +20,9 @@
 
 <script>
 import Information from "@/components/Information";
-import ShButton from "@/components/ShButton";
 export default {
   components: {
     Information,
-    ShButton,
   },
 };
 </script>
