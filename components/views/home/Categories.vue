@@ -68,6 +68,7 @@ export default {
   components: { SpecialitiesSlider },
   data: () => ({
     range: [200, 800],
+    treatments: [],
   }),
 };
 </script>

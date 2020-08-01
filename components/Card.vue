@@ -32,7 +32,7 @@ export default {
   cursor: pointer;
   .image-container {
     position: relative;
-    height: 180px;
+    height: 220px;
     .image-card {
       position: absolute;
       top: 0;

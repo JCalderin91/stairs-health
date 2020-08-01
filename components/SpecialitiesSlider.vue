@@ -27,14 +27,14 @@ export default {
       range: [125, 587],
       //Slider configuration [obj]
       options: {
-        slidesToShow: 14,
+        slidesToShow: 10,
         arrows: false,
         autoplay: false,
         responsive: [
           {
             breakpoint: 1800,
             settings: {
-              slidesToShow: 12,
+              slidesToShow: 10,
             },
           },
           {
@@ -99,13 +99,15 @@ export default {
 <style scoped lang="scss">
 .specialities-body {
   position: relative;
-  transform: translateY(-15px);
   margin: 10px 15px;
   background-color: white;
   z-index: 10;
   border-radius: 5px;
   overflow: hidden;
   border: 1px solid rgb(226, 226, 226);
+  &:not(.noMargin) {
+    transform: translateY(-15px);
+  }
   &.noMargin {
     margin: 0;
   }
@@ -115,7 +117,7 @@ export default {
   }
   .slider-controller {
     height: 100%;
-    background: #f5f5f5;
+    background: #fafafa;
     display: flex;
     align-items: center;
     padding: 1.2rem;

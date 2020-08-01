@@ -110,6 +110,10 @@ export default {
       }
     }
   },
+  env: {
+    CTF_SPACE_ID: '3mxd138y62r6',
+    CTF_CDA_ACCESS_TOKEN: '7b27ZRkopKtHRkncrKboCRuRjPWQi_jY465o0j7Lmgg'
+  },
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/

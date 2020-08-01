@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.11.0",
+    "contentful": "^7.14.6",
     "nuxt": "^2.13.0",
     "nuxt-gmaps": "^1.2.5",
     "vue-concise-slider": "^3.4.4",
