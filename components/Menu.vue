@@ -10,7 +10,7 @@
 
       <div class="menu-nav-bar">
         <span>How it Works</span>
-        <span>Explode Savings</span>
+        <span>Explore Savings</span>
         <span>Become a Member</span>
         <span>For Providers</span>
         <span>Contact Us</span>
